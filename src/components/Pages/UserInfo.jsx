@@ -9,7 +9,8 @@ import {
 import React from "react";
 import { auth, db } from "../firebase";
 import { deleteUser } from "firebase/auth";
-// import firebase from "firebase/compat/app";
+import deletingImg from "../../images/delete.png";
+import unblockingImg from "../../images/unblock.png";
 
 export default function UserInfo() {
     // const auth = getAuth();
@@ -107,20 +108,23 @@ export default function UserInfo() {
                                     </button>
                                 ) : (
                                     <button
-                                        className="text-white bg-red-700 hover:bg-red-800 focus:outline-none focus:ring-4 focus:ring-red-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900"
+                                        className="text-white  hover:bg-red-800 focus:outline-none focus:ring-4 focus:ring-red-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900"
                                         onClick={() =>
                                             handleAction(user.id, "active")
                                         }
                                     >
-                                        Unblock
+                                        <img
+                                            src={unblockingImg}
+                                            alt="unblocking"
+                                        />
                                     </button>
                                 )}
 
                                 <button
-                                    className="text-white bg-red-700 hover:bg-red-800 focus:outline-none focus:ring-4 focus:ring-red-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900"
+                                    className="text-white  hover:bg-red-800 focus:outline-none focus:ring-4 focus:ring-red-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900"
                                     onClick={() => handleDelete(user.id)}
                                 >
-                                    Delete
+                                    <img src={deletingImg} alt="deleting" />
                                 </button>
                             </td>
                         </tr>
