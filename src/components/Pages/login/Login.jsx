@@ -53,6 +53,8 @@ export default function Login() {
         }
     };
 
+  
+
     return (
         <div>
             <section className="bg-gray-50 dark:bg-gray-900">
@@ -126,6 +128,12 @@ export default function Login() {
                                             {showPassword ? "Hide" : "Show"}
                                         </button>
                                     </div>
+                                    <NavLink
+                                        to="/forgotePassword"
+                                        className="text-sm  mt-7 float-end font-medium text-primary-600 hover:underline dark:text-primary-500"
+                                    >
+                                        Forgot password?
+                                    </NavLink>
                                 </div>
                                 <button
                                     type="submit"
@@ -133,6 +141,7 @@ export default function Login() {
                                 >
                                     Sign in
                                 </button>
+
                                 <p className="text-sm font-light text-gray-500 dark:text-gray-400">
                                     Don’t have an account yet?{" "}
                                     <NavLink

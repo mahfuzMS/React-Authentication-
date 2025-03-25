@@ -34,7 +34,7 @@ const RootRouter = createBrowserRouter([
                 ),
             },
             {
-                path: "forgotPass",
+                path: "forgotePassword",
                 element: <ForgotePassword />,
             },
         ],
